@@ -1,0 +1,52 @@
+/* Theme rules describe how modules or layouts might look.
+ Most sites don’t require a layer of theming but it is good to be aware of it. colors, borders */
+
+:root {
+  --main-background: #000;
+  --back: rgb(216, 216, 216);
+  --scalefold: #fff;
+  --border: rgb(151, 151, 151);
+  --font: rgb(99, 99, 99);
+}
+
+body {
+  background-color: var(--main-background);
+}
+
+.app--wrapper {
+  background-color: var(--scalefold);
+}
+.app {
+  color: var(--font);
+}
+
+header {
+  background-color: var(--back);
+  border: 1px solid var(--border);
+}
+
+aside {
+  background-color: var(--back);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-right: none;
+}
+
+main {
+  background-color: var(--back);
+  border: 1px solid var(--border);
+  border-top: none;
+}
+main section {
+  border: 1px solid var(--border);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.c {
+  border-right: 1px solid var(--border);
+}
+
+.down--section div:not(.h) {
+  border-right: 1px solid var(--border);
+}

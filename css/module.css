@@ -1,0 +1,31 @@
+/* modules.css are the reusable, modular parts of our design.
+They are the callouts, the sidebar sections, the product lists and so on. */
+
+/** Header **/
+header {
+  width: 100%;
+  text-align: center;
+  line-height: 100px;
+
+  height: 100px;
+}
+aside {
+  width: 200px;
+  height: 600px;
+  float: left;
+  text-align: center;
+  line-height: 600px;
+}
+main {
+  float: right;
+  height: 600px;
+  clear: right;
+  width: calc(100% - 200px);
+  text-align: center;
+}
+footer {
+  clear: both;
+  height: 150px;
+  width: 100%;
+  line-height: 150px;
+}
