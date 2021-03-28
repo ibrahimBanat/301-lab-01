@@ -1,0 +1,115 @@
+/* layout.css divide the page into sections. Layouts hold one or more modules together. */
+
+/** scalefold for the app **/
+.app--wrapper {
+  width: 1040px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  height: 100%;
+  overflow: hidden;
+}
+.app {
+  width: 960px;
+  margin: auto;
+}
+
+main section {
+  width: 100%;
+}
+
+.upper--section {
+  height: 200px;
+}
+.upper--section div {
+  width: calc(100% / 2);
+  line-height: 200px;
+}
+
+.c {
+  float: left;
+  height: 100%;
+}
+
+.d {
+  float: right;
+  height: 100%;
+}
+
+.down--section {
+  clear: both;
+  height: 250px;
+}
+.down--section div {
+  height: 100%;
+  width: calc(100% / 4);
+  line-height: 250px;
+}
+
+.e {
+  float: left;
+}
+.f {
+  float: left;
+}
+.g {
+  float: left;
+}
+.h {
+  float: left;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .app--wrapper {
+    width: calc(480px + 80px);
+    margin: 0 auto;
+    padding: 60px 40px;
+    height: 100%;
+    overflow: hidden;
+  }
+  .app {
+    width: 480px;
+    margin: auto;
+  }
+  main section {
+    width: 100%;
+  }
+
+  .upper--section {
+    height: 250px;
+  }
+  .upper--section div {
+    width: 100%;
+    line-height: 125px;
+  }
+
+  .c {
+    height: 50%;
+  }
+
+  .d {
+    height: 50%;
+  }
+
+  .down--section {
+    height: 500px;
+  }
+  .down--section div {
+    height: calc(100% / 2);
+    width: calc(100% / 2);
+    line-height: 250px;
+  }
+
+  .e {
+    float: left;
+  }
+  .f {
+    float: right;
+  }
+  /* .g {
+      
+    float: left;
+  }
+  .h {
+    float: left;
+  } */
+}
