@@ -57,3 +57,59 @@ main section {
 .h {
   float: left;
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .app--wrapper {
+    width: calc(480px + 80px);
+    margin: 0 auto;
+    padding: 60px 40px;
+    height: 100%;
+    overflow: hidden;
+  }
+  .app {
+    width: 480px;
+    margin: auto;
+  }
+  main section {
+    width: 100%;
+  }
+
+  .upper--section {
+    height: 250px;
+  }
+  .upper--section div {
+    width: 100%;
+    line-height: 125px;
+  }
+
+  .c {
+    height: 50%;
+  }
+
+  .d {
+    height: 50%;
+  }
+
+  .down--section {
+    height: 500px;
+  }
+  .down--section div {
+    height: calc(100% / 2);
+    width: calc(100% / 2);
+    line-height: 250px;
+  }
+
+  .e {
+    float: left;
+  }
+  .f {
+    float: right;
+  }
+  /* .g {
+      
+    float: left;
+  }
+  .h {
+    float: left;
+  } */
+}

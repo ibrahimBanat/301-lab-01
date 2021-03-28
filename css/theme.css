@@ -50,3 +50,36 @@ main section {
 .down--section div:not(.h) {
   border-right: 1px solid var(--border);
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+  :root {
+    --back: #ffde8c;
+  }
+  header {
+    background-color: var(--back);
+    border: 1px solid var(--border);
+  }
+
+  aside {
+    background-color: var(--back);
+    border: 1px solid var(--border);
+    border-top: none;
+  }
+
+  main {
+    background-color: var(--back);
+    border: 1px solid var(--border);
+    border-top: none;
+  }
+  .upper--section div:not(.d) {
+    border-bottom: 1px solid var(--border);
+    border-right: none;
+  }
+  .f {
+    border-right: none !important;
+  }
+  .e,
+  .f {
+    border-bottom: 1px solid var(--border);
+  }
+}
