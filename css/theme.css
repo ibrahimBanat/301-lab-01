@@ -3,55 +3,103 @@
 
 :root {
   --main-background: #000;
-  --back: rgb(216, 216, 216);
+  --back: #00c9a7;
   --scalefold: #fff;
-  --border: rgb(151, 151, 151);
-  --font: rgb(99, 99, 99);
+  --border: #845ec2;
+  --font: #845ec2;
+
+  --back-tab: #4b4453;
+  --border-tab: #c34a36;
+  --font-tab: #c34a36;
 }
 
-body {
-  background-color: var(--scalefold);
-}
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: var(--scalefold);
+  }
 
-.app--wrapper {
-  background-color: var(--scalefold);
-}
-.app {
-  color: var(--font);
-}
+  .app--wrapper {
+    background-color: var(--scalefold);
+  }
+  .app {
+    color: var(--font);
+  }
 
-header {
-  background-color: var(--back);
-  border: 1px solid var(--border);
-}
+  header {
+    background-color: var(--back);
+    border: 1px solid var(--border);
+  }
 
-aside {
-  background-color: var(--back);
-  border: 1px solid var(--border);
-  border-top: none;
-  border-right: none;
-}
+  aside {
+    background-color: var(--back);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-right: none;
+  }
 
-main {
-  background-color: var(--back);
-  border: 1px solid var(--border);
-  border-top: none;
-}
-main section {
-  border: 1px solid var(--border);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.c {
-  border-right: 1px solid var(--border);
-}
+  main {
+    background-color: var(--back);
+    border: 1px solid var(--border);
+    border-top: none;
+  }
+  main section {
+    border: 1px solid var(--border);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .c {
+    border-right: 1px solid var(--border);
+  }
 
-.down--section div:not(.h) {
-  border-right: 1px solid var(--border);
+  .down--section div:not(.h) {
+    border-right: 1px solid var(--border);
+  }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: var(--scalefold);
+  }
 
-@media (min-width: 480px) and (max-width: 767px) {
+  .app--wrapper {
+    background-color: var(--scalefold);
+  }
+  .app {
+    color: var(--font-tab) !important;
+  }
+
+  header {
+    background-color: var(--back-tab) !important;
+    border: 1px solid var(--border);
+  }
+
+  aside {
+    background-color: var(--back-tab);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-right: none;
+  }
+
+  main {
+    background-color: var(--back-tab) !important;
+    border: 1px solid var(--border);
+    border-top: none;
+  }
+  main section {
+    border: 1px solid var(--border);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .c {
+    border-right: 1px solid var(--border);
+  }
+
+  .down--section div:not(.h) {
+    border-right: 1px solid var(--border);
+  }
+}
+@media only screen and (max-width: 767px) {
   :root {
     --back: #ffde8c;
   }
