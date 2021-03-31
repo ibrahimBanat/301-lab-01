@@ -1,64 +1,111 @@
 /* layout.css divide the page into sections. Layouts hold one or more modules together. */
 
 /** scalefold for the app **/
-.app--wrapper {
-  width: 1040px;
-  margin: 0 auto;
-  padding: 60px 40px;
-  height: 100%;
-  overflow: hidden;
-}
-.app {
-  width: 960px;
-  margin: auto;
+
+:root {
+  --row1: calc((1 / 7) * 100%);
+  --row2: calc((2 / 7) * 100%);
+  --row3: calc((2.5 / 7) * 100%);
+  --row4: calc((1.5 / 7) * 100%);
+
+  --column1: calc((200 / 960) * 100%);
+  --column2: calc((380 / 960) * 100%);
 }
 
-main section {
-  width: 100%;
+@media only screen and (min-width: 1024px) {
+  .app {
+    margin: 3px;
+    display: grid;
+    grid-template-columns: var(--column1) repeat(2, var(--column2));
+    height: 700px;
+    grid-template-rows: var(--row1) var(--row2) var(--row3) var(--row4);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 960px;
+    margin: auto;
+  }
+
+  main section {
+    width: 100%;
+  }
+
+  .upper--section {
+    display: flex;
+    height: 200px;
+  }
+  .upper--section div {
+    width: calc(100% / 2);
+    line-height: 200px;
+  }
+
+  .c {
+    /* float: left; */
+    height: 100%;
+  }
+
+  .d {
+    /* float: right; */
+    height: 100%;
+  }
+
+  .down--section {
+    height: 250px;
+    display: flex;
+  }
+  .down--section div {
+    height: 100%;
+    width: calc(100% / 4);
+    line-height: 250px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app {
+    margin: 3px;
+    display: grid;
+    grid-template-columns: var(--column1) repeat(2, var(--column2));
+    height: 700px;
+    grid-template-rows: var(--row1) var(--row2) var(--row3) var(--row4);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    /* margin: auto; */
+  }
+
+  main section {
+    width: 100%;
+  }
+
+  .upper--section {
+    display: flex;
+    height: 200px;
+  }
+  .upper--section div {
+    width: calc(100% / 2);
+    line-height: 200px;
+  }
+
+  .c {
+    /* float: left; */
+    height: 100%;
+  }
+
+  .d {
+    /* float: right; */
+    height: 100%;
+  }
+
+  .down--section {
+    height: 250px;
+    display: flex;
+  }
+  .down--section div {
+    height: 100%;
+    width: calc(100% / 4);
+    line-height: 250px;
+  }
 }
 
-.upper--section {
-  height: 200px;
-}
-.upper--section div {
-  width: calc(100% / 2);
-  line-height: 200px;
-}
-
-.c {
-  float: left;
-  height: 100%;
-}
-
-.d {
-  float: right;
-  height: 100%;
-}
-
-.down--section {
-  clear: both;
-  height: 250px;
-}
-.down--section div {
-  height: 100%;
-  width: calc(100% / 4);
-  line-height: 250px;
-}
-
-.e {
-  float: left;
-}
-.f {
-  float: left;
-}
-.g {
-  float: left;
-}
-.h {
-  float: left;
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .app--wrapper {
     width: calc(480px + 80px);
     margin: 0 auto;
@@ -69,6 +116,8 @@ main section {
   .app {
     width: 480px;
     margin: auto;
+    height: 1055px;
+    color: var(--border);
   }
   main section {
     width: 100%;
@@ -77,39 +126,37 @@ main section {
   .upper--section {
     height: 250px;
   }
-  .upper--section div {
-    width: 100%;
-    line-height: 125px;
-  }
 
   .c {
     height: 50%;
+    line-height: 125px;
   }
 
   .d {
     height: 50%;
+    line-height: 125px;
+    border-bottom: 1px solid var(--border);
   }
 
   .down--section {
     height: 500px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .down--section div {
-    height: calc(100% / 2);
-    width: calc(100% / 2);
+    width: 50%;
+    height: 250px;
     line-height: 250px;
-  }
+    border: 1px solid var(--border);
+    border-top: none;
 
-  .e {
-    float: left;
+    border-right: none;
   }
-  .f {
-    float: right;
+  .e,
+  .g {
+    border-left: none !important;
   }
-  /* .g {
-      
-    float: left;
+  footer {
+    text-align: center;
   }
-  .h {
-    float: left;
-  } */
 }

@@ -2,35 +2,78 @@
 They are the callouts, the sidebar sections, the product lists and so on. */
 
 /** Header **/
-header {
-  width: 100%;
-  text-align: center;
-  line-height: 100px;
 
-  height: 100px;
+/* 1024 */
+@media only screen and (min-width: 1024px) {
+  header {
+    grid-area: 1 / 1 / 2 / 6;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+
+    /* height: 100px; */
+  }
+  aside {
+    grid-area: 2 / 1 / 6 / 2;
+    /* width: 200px; */
+    height: 600px;
+    /* float: left; */
+    text-align: center;
+    line-height: 600px;
+  }
+  main {
+    grid-area: 2 / 2 / 4 / 6;
+    /* float: right; */
+    height: 600px;
+    clear: right;
+    width: calc(100% - 200px);
+    text-align: center;
+    width: 100%;
+  }
+  footer {
+    grid-area: 4 / 2 / 5 / 6;
+    clear: both;
+    height: 150px;
+    width: 100%;
+    line-height: 150px;
+  }
 }
-aside {
-  width: 200px;
-  height: 600px;
-  float: left;
-  text-align: center;
-  line-height: 600px;
-}
-main {
-  float: right;
-  height: 600px;
-  clear: right;
-  width: calc(100% - 200px);
-  text-align: center;
-}
-footer {
-  clear: both;
-  height: 150px;
-  width: 100%;
-  line-height: 150px;
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    grid-area: 1 / 1 / 2 / 6;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+
+    /* height: 100px; */
+  }
+  aside {
+    grid-area: 2 / 1 / 6 / 2;
+    /* width: 200px; */
+    height: 600px;
+    /* float: left; */
+    text-align: center;
+    line-height: 600px;
+  }
+  main {
+    grid-area: 2 / 2 / 4 / 6;
+    /* float: right; */
+    height: 600px;
+    clear: right;
+    width: calc(100% - 200px);
+    text-align: center;
+    width: 100%;
+  }
+  footer {
+    grid-area: 4 / 2 / 5 / 6;
+    clear: both;
+    height: 150px;
+    width: 100%;
+    line-height: 150px;
+  }
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   header {
     width: 100%;
     text-align: center;
@@ -46,15 +89,18 @@ footer {
     line-height: 150px;
   }
   main {
-    height: 830px;
+    height: 750px;
 
     width: 100%;
     text-align: center;
   }
   footer {
-    clear: both;
     height: 80px;
     width: 100%;
     line-height: 80px;
+
+    background: var(--back);
+    border: 1px solid var(--border);
+    border-top: none;
   }
 }
