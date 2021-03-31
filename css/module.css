@@ -3,27 +3,32 @@ They are the callouts, the sidebar sections, the product lists and so on. */
 
 /** Header **/
 header {
+  grid-area: 1 / 1 / 2 / 6;
   width: 100%;
   text-align: center;
   line-height: 100px;
 
-  height: 100px;
+  /* height: 100px; */
 }
 aside {
-  width: 200px;
+  grid-area: 2 / 1 / 6 / 2;
+  /* width: 200px; */
   height: 600px;
-  float: left;
+  /* float: left; */
   text-align: center;
   line-height: 600px;
 }
 main {
-  float: right;
+  grid-area: 2 / 2 / 4 / 6;
+  /* float: right; */
   height: 600px;
   clear: right;
   width: calc(100% - 200px);
   text-align: center;
+  width: 100%;
 }
 footer {
+  grid-area: 4 / 2 / 5 / 6;
   clear: both;
   height: 150px;
   width: 100%;

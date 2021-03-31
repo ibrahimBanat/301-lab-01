@@ -1,16 +1,25 @@
 /* layout.css divide the page into sections. Layouts hold one or more modules together. */
 
 /** scalefold for the app **/
-.app--wrapper {
-  width: 1040px;
-  margin: 0 auto;
-  padding: 60px 40px;
-  height: 100%;
-  overflow: hidden;
+
+:root {
+  --row1: calc((1 / 7) * 100%);
+  --row2: calc((2 / 7) * 100%);
+  --row3: calc((2.5 / 7) * 100%);
+  --row4: calc((1.5 / 7) * 100%);
+
+  --column1: calc((200 / 960) * 100%);
+  --column2: calc((380 / 960) * 100%);
 }
+
 .app {
-  width: 960px;
-  margin: auto;
+  margin: 3px;
+  display: grid;
+  grid-template-columns: var(--column1) repeat(2, var(--column2));
+  height: 700px;
+  grid-template-rows: var(--row1) var(--row2) var(--row3) var(--row4);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 main section {
@@ -18,6 +27,7 @@ main section {
 }
 
 .upper--section {
+  display: flex;
   height: 200px;
 }
 .upper--section div {
@@ -26,18 +36,18 @@ main section {
 }
 
 .c {
-  float: left;
+  /* float: left; */
   height: 100%;
 }
 
 .d {
-  float: right;
+  /* float: right; */
   height: 100%;
 }
 
 .down--section {
-  clear: both;
   height: 250px;
+  display: flex;
 }
 .down--section div {
   height: 100%;
@@ -45,7 +55,7 @@ main section {
   line-height: 250px;
 }
 
-.e {
+/* .e {
   float: left;
 }
 .f {
@@ -56,7 +66,7 @@ main section {
 }
 .h {
   float: left;
-}
+} */
 
 @media (min-width: 480px) and (max-width: 767px) {
   .app--wrapper {
@@ -76,10 +86,12 @@ main section {
 
   .upper--section {
     height: 250px;
+    /* background-color: red; */
+    display: flex;
   }
   .upper--section div {
-    width: 100%;
-    line-height: 125px;
+    /* width: 100%; */
+    /* line-height: 125px; */
   }
 
   .c {
@@ -99,12 +111,12 @@ main section {
     line-height: 250px;
   }
 
-  .e {
+  /* .e {
     float: left;
   }
   .f {
     float: right;
-  }
+  } */
   /* .g {
       
     float: left;
